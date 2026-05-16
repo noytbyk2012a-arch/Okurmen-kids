@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#b4c5ff",
+                    "primary-container": "#2563eb",
+                    "surface": "#f8f9ff",
+                    "on-secondary-fixed-variant": "#783200",
+                    "on-primary-fixed-variant": "#003ea8",
+                    "surface-container-low": "#eff4ff",
+                    "primary": "#004ac6",
+                    "tertiary-fixed-dim": "#d0bcff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#ffb690",
+                    "on-surface": "#0b1c30",
+                    "secondary": "#9d4300",
+                    "on-tertiary-fixed": "#23005c",
+                    "on-primary-fixed": "#00174b",
+                    "error-container": "#ffdad6",
+                    "inverse-on-surface": "#eaf1ff",
+                    "inverse-primary": "#b4c5ff",
+                    "surface-container-high": "#dce9ff",
+                    "on-primary-container": "#eeefff",
+                    "on-background": "#0b1c30",
+                    "on-secondary-fixed": "#341100",
+                    "on-secondary-container": "#5c2400",
+                    "primary-fixed": "#dbe1ff",
+                    "background": "#f8f9ff",
+                    "inverse-surface": "#213145",
+                    "on-tertiary-fixed-variant": "#5516be",
+                    "outline-variant": "#c3c6d7",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-container": "#7d4ce7",
+                    "on-tertiary-container": "#f6edff",
+                    "outline": "#737686",
+                    "surface-bright": "#f8f9ff",
+                    "tertiary": "#632ecd",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-tint": "#0053db",
+                    "secondary-container": "#fd761a",
+                    "secondary-fixed": "#ffdbca",
+                    "tertiary-fixed": "#e9ddff",
+                    "surface-dim": "#cbdbf5",
+                    "error": "#ba1a1a",
+                    "surface-variant": "#d3e4fe",
+                    "surface-container": "#e5eeff",
+                    "on-surface-variant": "#434655"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "xs": "4px",
+                    "base": "8px",
+                    "margin-desktop": "80px",
+                    "sm": "12px",
+                    "gutter": "24px",
+                    "xl": "64px",
+                    "md": "24px",
+                    "margin-mobile": "16px",
+                    "lg": "40px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Quicksand"],
+                    "label-lg": ["Quicksand"],
+                    "headline-md": ["Quicksand"],
+                    "display": ["Quicksand"],
+                    "headline-lg-mobile": ["Quicksand"],
+                    "headline-lg": ["Quicksand"],
+                    "body-md": ["Quicksand"],
+                    "label-md": ["Quicksand"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "500"}],
+                    "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .chunky-button {
+            box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.1);
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .chunky-button:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background">
+<!-- TopAppBar -->
+<header class="bg-surface/80 backdrop-blur-md text-primary sticky top-0 z-50 flex justify-between items-center px-margin-mobile h-16 w-full shadow-[0px_4px_12px_rgba(37,99,235,0.08)]">
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">rocket_launch</span>
+<h1 class="text-headline-md font-headline-md font-bold text-primary">Okurmen Kids</h1>
+</div>
+<button class="bg-primary-container text-on-primary-container px-base py-xs rounded-full text-label-lg font-label-lg chunky-button">Join</button>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-lg pb-xl px-margin-mobile">
+<div class="flex flex-col gap-md">
+<div class="rounded-xl overflow-hidden shadow-lg border-4 border-white">
+<img alt="Children coding with robots" class="w-full h-auto object-cover aspect-[1.5]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA6MCSv2-r-KBfcrSzs32XD-BCp9q8Jo0o9NsTwpMBazUyVtWGBZhpa6J6KfJ_ydUNiuRNbzD9gPtEbm5OTMws3GZtu6EgdnbH2i19LWxmTTfNojXnIEFP64LJt7iyUPfHjrnZT0fGT24TckrxSkNc1OwakFDoRAV9SUjLH0YwqOfxH-Kqwz_lOLFDwJbvgFtQQQJJnRF_SqBgQcJARuBeJWWIbNWTHtWGeZciEG59MFEyvj0VGSGkchJtu7st4b3SZEYEjTTYdZJK"/>
+</div>
+<div class="text-center flex flex-col gap-sm">
+<h2 class="text-headline-lg-mobile font-headline-lg-mobile text-primary">Стань IT-героем с Okurmen Kids!</h2>
+<p class="text-body-md font-body-md text-on-surface-variant">Программирование и робототехника для детей от 6 до 15 лет. Первое занятие — БЕСПЛАТНО!</p>
+<div class="mt-base">
+<button class="w-full bg-secondary-container text-white text-label-lg font-label-lg py-md rounded-xl chunky-button uppercase tracking-wider">Записаться сейчас</button>
+</div>
+</div>
+</div>
+<!-- Playful Background Accents -->
+<div class="absolute -top-10 -left-10 w-24 h-24 bg-tertiary-container/10 rounded-full blur-2xl -z-10"></div>
+<div class="absolute top-1/2 -right-10 w-32 h-32 bg-secondary-container/10 rounded-full blur-2xl -z-10"></div>
+</section>
+<!-- Features Section -->
+<section class="bg-surface-container-low py-lg px-margin-mobile">
+<h3 class="text-headline-md font-headline-md text-center mb-lg text-on-surface">Почему мы?</h3>
+<div class="grid grid-cols-1 gap-md">
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex items-center gap-md border-b-4 border-primary">
+<div class="bg-primary-container/10 p-base rounded-full text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">sports_esports</span>
+</div>
+<div>
+<h4 class="text-label-lg font-label-lg text-primary">Учим играя</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Сложные вещи через геймификацию</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex items-center gap-md border-b-4 border-secondary">
+<div class="bg-secondary-container/10 p-base rounded-full text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<h4 class="text-label-lg font-label-lg text-secondary">Опытные наставники</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Практикующие IT специалисты</p>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-md rounded-xl shadow-sm flex items-center gap-md border-b-4 border-tertiary">
+<div class="bg-tertiary-container/10 p-base rounded-full text-tertiary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">folder_special</span>
+</div>
+<div>
+<h4 class="text-label-lg font-label-lg text-tertiary">Проекты в портфолио</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Реальные кейсы с первого урока</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Courses Section -->
+<section class="py-lg px-margin-mobile">
+<h3 class="text-headline-md font-headline-md text-center mb-lg text-on-surface">Наши курсы</h3>
+<div class="flex flex-col gap-lg">
+<!-- Scratch Card -->
+<div class="bg-surface border-2 border-surface-container-highest rounded-xl p-md flex flex-col gap-sm shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-xs bg-primary-container text-white rounded-bl-xl text-label-md font-label-md">6-9 лет</div>
+<div class="text-primary">
+<span class="material-symbols-outlined text-[40px]" style="font-variation-settings: 'FILL' 1;">extension</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface">Scratch</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Создай свой первый мультфильм или игру при помощи блоков кода.</p>
+<button class="mt-base text-primary font-bold flex items-center gap-xs text-label-lg font-label-lg">
+                        Подробнее <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Python Card -->
+<div class="bg-surface border-2 border-surface-container-highest rounded-xl p-md flex flex-col gap-sm shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-xs bg-secondary-container text-white rounded-bl-xl text-label-md font-label-md">10-14 лет</div>
+<div class="text-secondary">
+<span class="material-symbols-outlined text-[40px]" style="font-variation-settings: 'FILL' 1;">code</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface">Python</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Изучаем самый популярный язык программирования в мире.</p>
+<button class="mt-base text-secondary font-bold flex items-center gap-xs text-label-lg font-label-lg">
+                        Подробнее <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Roblox Card -->
+<div class="bg-surface border-2 border-surface-container-highest rounded-xl p-md flex flex-col gap-sm shadow-sm relative overflow-hidden">
+<div class="absolute top-0 right-0 p-xs bg-tertiary-container text-white rounded-bl-xl text-label-md font-label-md">9-12 лет</div>
+<div class="text-tertiary">
+<span class="material-symbols-outlined text-[40px]" style="font-variation-settings: 'FILL' 1;">videogame_asset</span>
+</div>
+<h4 class="text-headline-md font-headline-md text-on-surface">Roblox Studio</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Проектируй миры и программируй игровую логику на Lua.</p>
+<button class="mt-base text-tertiary font-bold flex items-center gap-xs text-label-lg font-label-lg">
+                        Подробнее <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Enrollment Section -->
+<section class="bg-primary-container text-on-primary-container py-xl px-margin-mobile mx-margin-mobile rounded-xl shadow-lg mb-xl relative overflow-hidden">
+<div class="relative z-10">
+<h3 class="text-headline-md font-headline-md text-center mb-md">Запишись на пробный урок!</h3>
+<form class="flex flex-col gap-md">
+<div>
+<label class="text-label-md font-label-md mb-xs block opacity-80">Имя родителя</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-xl border-none p-md focus:ring-2 focus:ring-secondary-container" placeholder="Введите ваше имя" type="text"/>
+</div>
+<div>
+<label class="text-label-md font-label-md mb-xs block opacity-80">Телефон</label>
+<input class="w-full bg-surface-container-lowest text-on-surface rounded-xl border-none p-md focus:ring-2 focus:ring-secondary-container" placeholder="+7 (___) ___-__-__" type="tel"/>
+</div>
+<button class="mt-base bg-secondary-container text-white text-label-lg font-label-lg py-md rounded-xl chunky-button" type="submit">Хочу на пробный урок</button>
+</form>
+</div>
+<!-- Decorative circle -->
+<div class="absolute -bottom-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-xl"></div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container text-on-surface full-width rounded-t-xl mt-xl flex flex-col items-center gap-md py-lg px-margin-mobile w-full text-center">
+<h2 class="text-headline-sm font-headline-sm font-bold text-primary">Okurmen Kids</h2>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Courses</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">About Us</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="text-label-md font-label-md text-on-surface-variant hover:text-primary transition-colors" href="#">Contact</a>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-sm">© 2024 Okurmen Kids. Empowering little heroes through IT.</p>
+<div class="flex gap-md mt-sm">
+<span class="material-symbols-outlined text-primary-container">smart_toy</span>
+<span class="material-symbols-outlined text-secondary-container">rocket</span>
+<span class="material-symbols-outlined text-tertiary-container">auto_awesome</span>
+</div>
+</footer>
+</body></html>
